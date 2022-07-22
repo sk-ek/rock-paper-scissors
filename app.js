@@ -16,6 +16,7 @@ function getComputerChoice() {
 }
 
 function playRound(playerSelection, computerSelection) {
+  playerSelection = playerSelection.toLowerCase();
   switch (true) {
     case playerSelection === computerSelection:
       return `you tied: player: ${playerSelection} | computer: ${computerSelection}`;
@@ -41,6 +42,11 @@ function playRound(playerSelection, computerSelection) {
   }
 }
 
-console.log(playRound("rock", "rock"));
-console.log(playRound("rock", "paper"));
-console.log(playRound("rock", "scissors"));
+function game() {
+  for (let i = 0; i < 5; i++) {
+    playerSelection = prompt("choose one (rock, paper, scissors) : ");
+    console.log(playRound(playerSelection, getComputerChoice()));
+  }
+}
+
+game();
