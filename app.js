@@ -5,8 +5,6 @@ function getComputerChoice() {
 }
 
 function playRound(playerSelection, computerSelection) {
-  if (choiceList.includes(playerSelection)) {
-  }
   playerSelection = playerSelection.toLowerCase();
   switch (true) {
     case playerSelection === computerSelection:
@@ -29,9 +27,16 @@ function playRound(playerSelection, computerSelection) {
 
 function game() {
   for (let i = 0; i < 5; i++) {
-    playerSelection = prompt("choose one (rock, paper, scissors) : ");
-    console.log(playRound(playerSelection, getComputerChoice()));
+    console.log(playRound(promptChoice(), getComputerChoice()));
   }
+}
+
+function promptChoice() {
+  let playerSelection;
+  while (!choiceList.includes(playerSelection)) {
+    playerSelection = prompt("choose one (rock, paper, scissors) : ");
+  }
+  return playerSelection;
 }
 
 game();
