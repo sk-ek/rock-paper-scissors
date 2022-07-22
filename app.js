@@ -21,23 +21,17 @@ function playRound(playerSelection, computerSelection) {
     case playerSelection === computerSelection:
       return `you tied: player: ${playerSelection} | computer: ${computerSelection}`;
       break;
-    case playerSelection === "rock" && computerSelection === "paper":
-      return `you lost: player: ${playerSelection} | computer: ${computerSelection}`;
-      break;
     case playerSelection === "rock" && computerSelection === "scissors":
       return `you won: player: ${playerSelection} | computer: ${computerSelection}`;
       break;
     case playerSelection === "paper" && computerSelection === "rock":
       return `you won: player: ${playerSelection} | computer: ${computerSelection}`;
       break;
-    case playerSelection === "paper" && computerSelection === "scissors":
-      return `you lost: player: ${playerSelection} | computer: ${computerSelection}`;
-      break;
-    case playerSelection === "scissors" && computerSelection === "rock":
-      return `you lost: player: ${playerSelection} | computer: ${computerSelection}`;
-      break;
     case playerSelection === "scissors" && computerSelection === "paper":
       return `you won: player: ${playerSelection} | computer: ${computerSelection}`;
+      break;
+    default:
+      return `you lost: player: ${playerSelection} | computer: ${computerSelection}`;
       break;
   }
 }
