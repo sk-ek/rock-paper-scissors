@@ -6,8 +6,6 @@ function getComputerChoice() {
 }
 // function to play a round of rock paper scissors
 function playRound(playerSelection, computerSelection) {
-  // set the input of whatever the player put in to lowercase
-  playerSelection = playerSelection.toLowerCase();
   // switch case to check who won based on the playerSelection and the computerSelection
   switch (true) {
     case playerSelection === computerSelection:
@@ -44,8 +42,10 @@ function promptChoice() {
   is not in choiceList, it will prompt the prompt forever until it's in choiceList 
   
   */
-  while (!choiceList.includes(playerSelection.toLowerCase())) {
+  while (!choiceList.includes(playerSelection)) {
     playerSelection = prompt("choose one (rock, paper, scissors) : ");
+    playerSelection =
+      typeof playerSelection === "string" ? playerSelection.toLowerCase() : "";
   }
   return playerSelection;
 }
