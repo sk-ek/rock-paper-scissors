@@ -36,7 +36,7 @@ function game() {
 }
 
 function promptChoice() {
-  let playerSelection;
+  let playerSelection = "";
   /*
   while the playerSelection
   (the string that the player input into the prompt 
@@ -44,8 +44,7 @@ function promptChoice() {
   is not in choiceList, it will prompt the prompt forever until it's in choiceList 
   
   */
-
-  while (!choiceList.includes(playerSelection)) {
+  while (!choiceList.includes(playerSelection.toLowerCase())) {
     playerSelection = prompt("choose one (rock, paper, scissors) : ");
   }
   return playerSelection;
