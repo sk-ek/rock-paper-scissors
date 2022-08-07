@@ -1,3 +1,28 @@
-.body {
-  background-color: black;
+.box img {
+  height: 10em;
+  width: auto;
+}
+
+.selection img {
+  width: 10em;
+  height: auto;
+}
+
+.selection-boxes {
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+}
+
+.boxes {
+  display: flex;
+  justify-content: center;
+  padding-top: 125px;
+  gap: 100px;
+}
+
+.bordered {
+  padding: 10px;
+  border: 10px solid burlywood;
+  border-radius: 10px;
 }
