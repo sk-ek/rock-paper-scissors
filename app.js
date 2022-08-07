@@ -1,3 +1,5 @@
+const box = document.querySelectorAll(".box");
+
 // list for the options in rock paper scissors
 const choiceList = ["rock", "paper", "scissors"];
 // function for getting a random element in choiceList
@@ -26,10 +28,17 @@ function playRound(playerSelection, computerSelection) {
       break;
   }
 }
+
+function getPlayerChoice() {
+  box.forEach((boxItem) =>
+    boxItem.addEventListener("click", (e) => console.log(e.target.id))
+  );
+}
+
 // function to play rock paper scissors 5 times
 function game() {
   for (let i = 0; i < 5; i++) {
-    console.log(playRound(promptChoice(), getComputerChoice()));
+    console.log(playRound(getPlayerChoice(), getComputerChoice()));
   }
 }
 
