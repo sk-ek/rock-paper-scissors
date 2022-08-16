@@ -1,4 +1,10 @@
-const box = document.querySelectorAll(".box");
+const boxImg = document.querySelectorAll(".box-img");
+
+const result = document.querySelector(".result");
+
+const pSelection = document.querySelector(".player-selection");
+
+const cSelection = document.querySelector(".computer-selection");
 
 // list for the options in rock paper scissors
 const choiceList = ["rock", "paper", "scissors"];
@@ -11,36 +17,29 @@ function playRound(playerSelection, computerSelection) {
   // switch case to check who won based on the playerSelection and the computerSelection
   switch (true) {
     case playerSelection === computerSelection:
-      console.log(
-        `you tied: player: ${playerSelection} | computer: ${computerSelection}`
-      );
+      result.textContent = "you tied";
       break;
     case playerSelection === "rock" && computerSelection === "scissors":
-      console.log(
-        `you won: player: ${playerSelection} | computer: ${computerSelection}`
-      );
-      break;
     case playerSelection === "paper" && computerSelection === "rock":
-      console.log(
-        `you won: player: ${playerSelection} | computer: ${computerSelection}`
-      );
-      break;
     case playerSelection === "scissors" && computerSelection === "paper":
-      console.log(
-        `you won: player: ${playerSelection} | computer: ${computerSelection}`
-      );
+      result.textContent = "you won";
       break;
     // if all the above doesn't get executed then the player lost so we just need to default it and not make another 3 cases
     default:
-      console.log(
-        `you lost: player: ${playerSelection} | computer: ${computerSelection}`
-      );
+      result.textContent = "you lost";
       break;
   }
+
+  displayOptionSelected(playerSelection, computerSelection);
+}
+
+function displayOptionSelected(playerSelection, computerSelection) {
+  pSelection.src = `img/${playerSelection}.svg`;
+  cSelection.src = `img/${computerSelection}.svg`;
 }
 
 function playGame() {
-  box.forEach((boxItem) =>
+  boxImg.forEach((boxItem) =>
     boxItem.addEventListener("click", (e) =>
       playRound(e.target.id, getComputerChoice())
     )

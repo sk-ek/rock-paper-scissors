@@ -26,3 +26,6 @@
   border: 10px solid burlywood;
   border-radius: 10px;
 }
+.centered {
+  text-align: center;
+}

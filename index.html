@@ -8,28 +8,41 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h1>rock paper scissors</h1>
+    <h1 class="title centered">rock paper scissors</h1>
 
-    <h2>you won</h2>
+    <h2 class="result centered">you won</h2>
 
     <div class="selection-boxes">
-      <div class="selection player-selection bordered">
-        <img src="img/question-mark.svg" alt="question-mark" />
+      <div class="selection bordered">
+        <img
+          class="player-selection"
+          src="img/question-mark.svg"
+          alt="question-mark"
+        />
       </div>
-      <div class="selection computer-selection bordered">
-        <img src="img/question-mark.svg" alt="question-mark" />
+      <div class="selection bordered">
+        <img
+          class="computer-selection"
+          src="img/question-mark.svg"
+          alt="question-mark"
+        />
       </div>
     </div>
 
     <div class="boxes">
       <div class="box bordered">
-        <img src="img/rock.svg" alt="rock" id="rock" />
+        <img class="box-img" src="img/rock.svg" alt="rock" id="rock" />
       </div>
       <div class="box bordered">
-        <img src="img/paper.svg" alt="paper" id="paper" />
+        <img class="box-img" src="img/paper.svg" alt="paper" id="paper" />
       </div>
       <div class="box bordered">
-        <img src="img/scissors.svg" alt="scissors" id="scissors" />
+        <img
+          class="box-img"
+          src="img/scissors.svg"
+          alt="scissors"
+          id="scissors"
+        />
       </div>
     </div>
     <script src="app.js"></script>
