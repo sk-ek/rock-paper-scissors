@@ -1,1 +1,1 @@
-# https://sk-ek.github.io/rock-paper-scissors/
+# sk-ek.github.io/rock-paper-scissors/
